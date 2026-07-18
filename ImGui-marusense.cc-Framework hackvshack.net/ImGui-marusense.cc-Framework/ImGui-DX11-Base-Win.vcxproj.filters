@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fonts">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-7890-abcd-ef1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{c3d4e5f6-a7b8-9012-cdef-123456789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\framework">
+      <UniqueIdentifier>{b1c2d3e4-f5a6-7890-bcde-f123456789ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\pages">
+      <UniqueIdentifier>{d4e5f6a7-b8c9-0123-def0-234567890123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{0587d7a3-f2ce-4d56-b84f-a0005d3bfce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{08e36723-ce4f-4cff-9662-c40801cf1acf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ext\fonts\fonts.h">
+      <Filter>fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\imgui\imgui_impl_dx11.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\gui.hpp">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\framework\styling.hpp">
+      <Filter>gui\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\framework\checkbox\checkbox.hpp">
+      <Filter>gui\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\framework\sliders\sliders.hpp">
+      <Filter>gui\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\framework\combo\combo.hpp">
+      <Filter>gui\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\framework\shell\shell.hpp">
+      <Filter>gui\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\pages\pages.hpp">
+      <Filter>gui\pages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\pages\demo_config.hpp">
+      <Filter>gui\pages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\assets\fonts.hpp">
+      <Filter>gui\assets</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ext\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\imgui\imgui_impl_dx11.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\gui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\framework\checkbox\checkbox.cpp">
+      <Filter>gui\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\framework\sliders\sliders.cpp">
+      <Filter>gui\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\framework\combo\combo.cpp">
+      <Filter>gui\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\framework\keybind\keybind.cpp">
+      <Filter>gui\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\framework\shell\shell.cpp">
+      <Filter>gui\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\pages\tabs.cpp">
+      <Filter>gui\pages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\assets\fonts.cpp">
+      <Filter>gui\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\gui\assets\TabIcons.ttf">
+      <Filter>gui\assets</Filter>
+    </None>
+    <None Include="src\gui\assets\LegitTabIcons.ttf">
+      <Filter>gui\assets</Filter>
+    </None>
+  </ItemGroup>
+</Project>

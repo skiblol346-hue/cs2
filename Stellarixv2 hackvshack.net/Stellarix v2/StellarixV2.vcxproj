@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EntryPoint.cpp" />
+    <ClCompile Include="Src\Core\Config\Config.cpp" />
+    <ClCompile Include="Src\Core\Engine\Convar\Convar.cpp" />
+    <ClCompile Include="Src\Core\Engine\FuncrionCS2.cpp" />
+    <ClCompile Include="Src\Core\Hooks\HookManager.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_CalculateFov.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_CreateMovePredict.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_CreateSwapChain.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_DrawAggregateSceneObjectArray.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_DrawArray.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_DrawTeamIntro.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_FrameStageNotify.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_GetMatrixForView.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_IsRelativeMouseMode.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_MarkInterpolationLatchFlagsDirty.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_MouseInputEnabled.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_OnAddEntity.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_OnLevelInit.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_OnLevelShutdown.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_OnRemoveEntity.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_OverrideView.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_PopupEventHandle.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_Present.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_RenderCrosshair.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_RenderLegs.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_RenderLighting.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_RenderScopeOverlay.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_ResizeBuffers.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_SetModel.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_SetupViewModel.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_ShowMessageBox.cpp" />
+    <ClCompile Include="Src\Core\Hooks\List\Hook_ValidateCamera.cpp" />
+    <ClCompile Include="Src\Core\Interfaces\InterfaceManager.cpp" />
+    <ClCompile Include="Src\Core\Interfaces\List\CCSGOInput.cpp" />
+    <ClCompile Include="Src\Core\Interfaces\List\CGameEntitySystem.cpp" />
+    <ClCompile Include="Src\Core\Memory\Memory.cpp" />
+    <ClCompile Include="Src\Core\Renderer\Renderer.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Datatypes\CGameEvents.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Datatypes\CUserCmd.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Datatypes\KeyValue3.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Datatypes\QAngle.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Datatypes\UltBuffer.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Datatypes\Vector.cpp" />
+    <ClCompile Include="Src\Core\Sdk\EntityCache\EntityCache.cpp" />
+    <ClCompile Include="Src\Core\Sdk\EntityData.cpp" />
+    <ClCompile Include="Src\Core\Sdk\Protobuf\cs_usercmd.pb.cc" />
+    <ClCompile Include="Src\Core\Sdk\Protobuf\networkbasetypes.pb.cc" />
+    <ClCompile Include="Src\Core\Sdk\Protobuf\network_connection.pb.cc" />
+    <ClCompile Include="Src\Core\Sdk\Protobuf\usercmd.pb.cc" />
+    <ClCompile Include="Src\Core\Sdk\Schema\Schema.cpp" />
+    <ClCompile Include="Src\Core\StellarixClient.cpp" />
+    <ClCompile Include="Src\Core\Utils\Animations\AnimationHandler.cpp" />
+    <ClCompile Include="Src\Core\Utils\CDX11ImageHelper\CDX11ImageHelper.cpp" />
+    <ClCompile Include="Src\Core\Utils\ExplorerManager\ExplorerManager.cpp" />
+    <ClCompile Include="Src\Core\Utils\InputManager\InputManager.cpp" />
+    <ClCompile Include="Src\Core\Utils\Logger\Logger.cpp" />
+    <ClCompile Include="Src\Core\Utils\Math\Math.cpp" />
+    <ClCompile Include="Src\Core\Utils\PatternManager\PatternManager.cpp" />
+    <ClCompile Include="Src\External\SafetyHook\safetyhook.cpp" />
+    <ClCompile Include="Src\External\SafetyHook\Zydis.c" />
+    <ClCompile Include="Src\Features\AntiAim\AntiAim.cpp" />
+    <ClCompile Include="Src\Features\Features.cpp" />
+    <ClCompile Include="Src\Features\Misc\Misc.cpp" />
+    <ClCompile Include="Src\Features\Misc\ModelChanger\ModelChanger.cpp" />
+    <ClCompile Include="Src\Features\Misc\Movement\Movement.cpp" />
+    <ClCompile Include="Src\Features\Misc\ThirdPerson\ThirdPerson.cpp" />
+    <ClCompile Include="Src\Features\Rage\Rage.cpp" />
+    <ClCompile Include="Src\Features\Visuals\Chams\Chams.cpp" />
+    <ClCompile Include="Src\Features\Visuals\Effects\Effects.cpp" />
+    <ClCompile Include="Src\Features\Visuals\Esp\Esp.cpp" />
+    <ClCompile Include="Src\Features\visuals\Visuals.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\extension.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_freetype.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Src\Gui\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Src\Gui\LoadScreen\LoadScreen.cpp" />
+    <ClCompile Include="Src\Gui\Menu\Menu.cpp" />
+    <ClCompile Include="Src\Gui\StellarixUI.cpp" />
+    <ClCompile Include="Src\Gui\Watermark\Watermark.cpp" />
+    <ClCompile Include="Src\Launcher.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Assets\Fonts\Awesome5\Awesome5.hpp" />
+    <ClInclude Include="Src\Assets\Fonts\Awesome5\Awesome5_Name.hpp" />
+    <ClInclude Include="Src\Assets\Fonts\Inter\InterBold.hpp" />
+    <ClInclude Include="Src\Assets\Fonts\Verdana\Verdana.hpp" />
+    <ClInclude Include="Src\Assets\Fonts\WeaponIcons\WeaponIcons.hpp" />
+    <ClInclude Include="Src\Assets\Images\Ghost.hpp" />
+    <ClInclude Include="Src\Assets\Images\UserTestCat.hpp" />
+    <ClInclude Include="Src\Assets\Images\WatermarkUserBytes.hpp" />
+    <ClInclude Include="Src\Core\Common.hpp" />
+    <ClInclude Include="Src\Core\Config\Config.hpp" />
+    <ClInclude Include="Src\Core\Config\Variables.hpp" />
+    <ClInclude Include="Src\Core\Engine\Convar\Convar.hpp" />
+    <ClInclude Include="Src\Core\Engine\FuncrionCS2.hpp" />
+    <ClInclude Include="Src\Core\Hooks\HookManager.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_CalculateFov.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_CreateMovePredict.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_CreateSwapChain.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_DrawAggregateSceneObjectArray.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_DrawArray.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_DrawTeamIntro.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_FrameStageNotify.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_GetMatrixForView.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_IsRelativeMouseMode.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_MarkInterpolationLatchFlagsDirty.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_MouseInputEnabled.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_OnAddEntity.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_OnLevelInit.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_OnLevelShutdown.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_OnRemoveEntity.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_OverrideView.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_PopupEventHandle.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_Present.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_RenderCrosshair.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_RenderLegs.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_RenderLighting.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_RenderScopeOverlay.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_ResizeBuffers.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_SetModel.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_SetupViewModel.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_ShowMessageBox.hpp" />
+    <ClInclude Include="Src\Core\Hooks\List\Hook_ValidateCamera.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\InterfaceManager.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\CCSGOInput.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\CGameEntitySystem.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\CIPrediction.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\CNetworkClientService.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\CParticleSystem.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\CSchemaSystem.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\IEngineClient.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\IEngineCVar.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\IGlobalVars.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\IMaterialSystem.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\IMemAlloc.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\IResourceSystem.hpp" />
+    <ClInclude Include="Src\Core\Interfaces\List\ISwapChain.hpp" />
+    <ClInclude Include="Src\Core\Memory\Memory.hpp" />
+    <ClInclude Include="Src\Core\Renderer\Renderer.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Const.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\CAggregateSceneObject.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\CBufferString.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\CGameEvents.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\Color.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\CUserCmd.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\CViewSetup.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\Easing.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\KeyValue3.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\Matrix.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\QAngle.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\Quaternion.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\RawAllocator.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\StrongHandle.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\Transform.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UltBuffer.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UtlFixedMemory.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UtlHash.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UtlLeanVector.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UtlLinkedList.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UtlMemory.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\UtlVector.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Datatypes\Vector.hpp" />
+    <ClInclude Include="Src\Core\Sdk\EntityCache\CacheTypes\CachedEntity.hpp" />
+    <ClInclude Include="Src\Core\Sdk\EntityCache\CacheTypes\CachedPlayer.hpp" />
+    <ClInclude Include="Src\Core\Sdk\EntityCache\CacheTypes\CachedWeapon.hpp" />
+    <ClInclude Include="Src\Core\Sdk\EntityCache\EntityCache.hpp" />
+    <ClInclude Include="Src\Core\Sdk\EntityData.hpp" />
+    <ClInclude Include="Src\Core\Sdk\EntityHandle.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Globals.hpp" />
+    <ClInclude Include="Src\Core\Sdk\Protobuf\cs_usercmd.pb.h" />
+    <ClInclude Include="Src\Core\Sdk\Protobuf\networkbasetypes.pb.h" />
+    <ClInclude Include="Src\Core\Sdk\Protobuf\network_connection.pb.h" />
+    <ClInclude Include="Src\Core\Sdk\Protobuf\usercmd.pb.h" />
+    <ClInclude Include="Src\Core\Sdk\Schema\Schema.hpp" />
+    <ClInclude Include="Src\Core\StellarixClient.hpp" />
+    <ClInclude Include="Src\Core\Utils\Animations\AnimationHandler.hpp" />
+    <ClInclude Include="Src\Core\Utils\CDX11ImageHelper\CDX11ImageHelper.hpp" />
+    <ClInclude Include="Src\Core\Utils\CRT.hpp" />
+    <ClInclude Include="Src\Core\Utils\ExplorerManager\ExplorerManager.hpp" />
+    <ClInclude Include="Src\Core\Utils\InputManager\InputManager.hpp" />
+    <ClInclude Include="Src\Core\Utils\Logger\Logger.hpp" />
+    <ClInclude Include="Src\Core\Utils\Math\Math.hpp" />
+    <ClInclude Include="Src\Core\Utils\PatternManager\PatternManager.hpp" />
+    <ClInclude Include="Src\Core\Utils\Pe64.hpp" />
+    <ClInclude Include="Src\External\Extensions\Binary.hpp" />
+    <ClInclude Include="Src\External\Fnv1a\Fnv1a.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\freetype.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftcolor.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftdriver.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftparams.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\autohint.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\fthash.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\internal.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\psaux.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\pshints.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\t1types.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\tttables.h" />
+    <ClInclude Include="Src\External\Freetype\include\freetype\tttags.h" />
+    <ClInclude Include="Src\External\Freetype\include\ft2build.h" />
+    <ClInclude Include="Src\External\imgui_notify.h" />
+    <ClInclude Include="Src\External\json.hpp" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\any.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\any.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\api.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\arena.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\arenastring.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\arenaz_sampler.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\arena_impl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\arena_test_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\annotation_test_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\code_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\command_line_interface.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\cpp_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\enum.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\enum_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\extension.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\file.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\helpers.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\map_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\message.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\message_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\message_layout_helper.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\names.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\options.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\padding_optimizer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\parse_function_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\primitive_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\service.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\string_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\unittest.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\csharp\csharp_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\csharp\csharp_names.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\importer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\java\java_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\java\java_names.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\js\js_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\js\well_known_types_embed.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\mock_code_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\objectivec\objectivec_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\objectivec\objectivec_helpers.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\package_info.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\parser.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\php\php_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\plugin.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\plugin.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\python\python_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\ruby\ruby_generator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\scc.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\subprocess.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\compiler\zip_writer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\descriptor.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\descriptor.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\descriptor_database.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\duration.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\dynamic_message.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\empty.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\endian.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\explicitly_constructed.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\extension_set.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\extension_set_inl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\field_access_listener.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\field_mask.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_enum_reflection.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_enum_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_message_bases.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_message_reflection.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_message_table_driven.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_message_tctable_decl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_message_tctable_impl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\generated_message_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\has_bits.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\implicit_weak_message.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\inlined_string_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\gzip_stream.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\io_win32.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\package_info.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\printer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\strtod.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\tokenizer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\io\zero_copy_stream_impl_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_entry.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_entry_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_field_inl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_field_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_lite_test_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_test_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_test_util_impl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\map_type_handler.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\message.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\message_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\metadata.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\metadata_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\package_info.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\parse_context.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\port.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\reflection.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\reflection_internal.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\reflection_ops.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\reflection_tester.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\repeated_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\repeated_ptr_field.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\service.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\source_context.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\string_member_robber.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\struct.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\bytestream.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\callback.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\casts.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\common.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\fastmem.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\hash.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\int128.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\logging.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\macros.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\map_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\mathutil.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\mutex.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\once.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\platform_macros.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\port.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\status.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\statusor.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\status_macros.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\stl_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\stringpiece.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\stringprintf.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\strutil.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\substitute.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\template_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\stubs\time.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\testing\file.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\testing\googletest.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\test_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\test_util2.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\test_util_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\text_format.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\timestamp.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\type.pb.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\unknown_field_set.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\delimited_message_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\field_comparator.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\field_mask_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\constants.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\datapiece.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\default_value_objectwriter.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\error_listener.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\expecting_objectwriter.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\field_mask_utility.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\json_escaping.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\json_objectwriter.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\json_stream_parser.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\location_tracker.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\mock_error_listener.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\object_location_tracker.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\object_source.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\object_writer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\protostream_objectsource.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\protostream_objectwriter.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\proto_writer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\structured_objectwriter.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\type_info.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\type_info_test_helper.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\internal\utility.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\json_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\message_differencer.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\package_info.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\time_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\type_resolver.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\util\type_resolver_util.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\wire_format.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\wire_format_lite.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\wire_format_lite_inl.h" />
+    <ClInclude Include="Src\External\Protobufs\Google\protobuf\wrappers.pb.h" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\allocator.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\common.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\context.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\easy.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\inline_hook.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\mid_hook.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\os.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\utility.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\include\safetyhook\vmt_hook.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\safetyhook.hpp" />
+    <ClInclude Include="Src\External\SafetyHook\Zydis.h" />
+    <ClInclude Include="Src\External\stb_image.h" />
+    <ClInclude Include="Src\External\stb_sprintf.h" />
+    <ClInclude Include="Src\External\XorStr\XorStr.hpp" />
+    <ClInclude Include="Src\Features\AntiAim\AntiAim.hpp" />
+    <ClInclude Include="Src\Features\Features.hpp" />
+    <ClInclude Include="Src\Features\Misc\Misc.hpp" />
+    <ClInclude Include="Src\Features\Misc\ModelChanger\ModelChanger.hpp" />
+    <ClInclude Include="Src\Features\Misc\Movement\Movement.hpp" />
+    <ClInclude Include="Src\Features\Misc\ThirdPerson\ThirdPerson.hpp" />
+    <ClInclude Include="Src\Features\Prediction\Prediction.hpp" />
+    <ClInclude Include="Src\Features\Rage\LagcompRecord.hpp" />
+    <ClInclude Include="Src\Features\Rage\Rage.hpp" />
+    <ClInclude Include="Src\Features\Visuals\Chams\Chams.hpp" />
+    <ClInclude Include="Src\Features\Visuals\Chams\Materials.hpp" />
+    <ClInclude Include="Src\Features\Visuals\Effects\Effects.hpp" />
+    <ClInclude Include="Src\Features\Visuals\Esp\Esp.hpp" />
+    <ClInclude Include="Src\Features\Visuals\Visuals.hpp" />
+    <ClInclude Include="Src\Gui\ImGui\extension.hpp" />
+    <ClInclude Include="Src\Gui\ImGui\imconfig.h" />
+    <ClInclude Include="Src\Gui\ImGui\imgui.h" />
+    <ClInclude Include="Src\Gui\ImGui\imgui_freetype.h" />
+    <ClInclude Include="Src\Gui\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="Src\Gui\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Src\Gui\ImGui\imgui_internal.h" />
+    <ClInclude Include="Src\Gui\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Src\Gui\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Src\Gui\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Src\Gui\LoadScreen\LoadScreen.hpp" />
+    <ClInclude Include="Src\Gui\Menu\Menu.hpp" />
+    <ClInclude Include="Src\Gui\StellarixUI.hpp" />
+    <ClInclude Include="Src\Gui\Watermark\Watermark.hpp" />
+    <ClInclude Include="Src\Launcher.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\External\Protobufs\Google\protobuf\compiler\cpp\unittest.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\map_test.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\map_test_util.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\message_unittest.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\port_def.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\port_undef.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\proto3_lite_unittest.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\test_util.inc" />
+    <None Include="Src\External\Protobufs\Google\protobuf\wire_format_unittest.inc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e0602e44-8947-4500-8e4b-b6209dbf735e}</ProjectGuid>
+    <RootNamespace>StellarixV2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <VCToolsVersion>14.42.34433</VCToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <VCToolsVersion>14.42.34433</VCToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>stellarixV2</TargetName>
+    <IncludePath>$(SolutionDir)Src;$(SolutionDir)Src\External;$(SolutionDir)Src\External\Freetype\include;$(SolutionDir)Src\Gui;$(SolutionDir)Src\External\Protobufs;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>stellarixV2</TargetName>
+    <IncludePath>$(SolutionDir)Src;$(SolutionDir)Src\External;$(SolutionDir)Src\External\Freetype\include;$(SolutionDir)Src\Gui;$(SolutionDir)Src\External\Protobufs;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;STELLARIXV2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;STELLARIXV2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;_DEBUG;STELLARIXV2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableUAC>true</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;libprotobufd.lib;freetype_debug.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>CoreEntryPoint</EntryPointSymbol>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(SolutionDir)Src\External\Freetype\binary;$(SolutionDir)Src\External\SteamAPI\Lib;$(SolutionDir)Src\External\Protobufs</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;NDEBUG;STELLARIXV2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableUAC>true</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;libprotobuf.lib;freetype.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>CoreEntryPoint</EntryPointSymbol>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(SolutionDir)Src\External\Freetype\binary;$(SolutionDir)Src\External\SteamAPI\Lib;$(SolutionDir)Src\External\Protobufs</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

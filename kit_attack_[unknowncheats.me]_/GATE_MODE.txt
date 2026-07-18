@@ -1,0 +1,18 @@
+FVA_GATE_MODE = attack (schema-based)
+
+Section J is activated when:
+
+  engine_stable == true
+  AND local pawn is alive with HP > 0
+  AND (buttonstate1 | buttonstate2 | buttonstate3) &
+      (IN_ATTACK | IN_ATTACK2) != 0    <-- schema check
+
+In other words, spoofing is enabled only while the player is pressing
+the left or right mouse button.
+
+Works out of the box without requiring any external toggle.
+
+MD5: 132728ff79dd7308ce66d19123fdad8b
+
+Log:
+  [fva_recon][H1] tick=N SectionJ fired #M mode=attack ...

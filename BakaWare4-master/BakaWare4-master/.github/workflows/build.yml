@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        build-type: ["Debug", "Release", "RelWithDebInfo"]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+
+    - name: Install latest CMake.
+      uses: lukka/get-cmake@latest
+
+    - name: Setup vcpkg (it does not install any package yet)
+      uses: lukka/run-vcpkg@v11
+    
+    - name: Run CMake consuming CMakePreset.json and run vcpkg to build dependencies
+      uses: lukka/run-cmake@v10
+      with:
+        configurePreset: ${{ matrix.build-type == 'Debug' && 'x64-windows' || 'x64-windows-static' }}
+        buildPreset: ${{matrix.build-type}}
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: ${{matrix.build-type}}
+        path: |
+          ${{github.workspace}}/build/bin/${{matrix.build-type}}

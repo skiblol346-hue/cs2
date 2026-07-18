@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Alpha|Win32">
+      <Configuration>Alpha</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Alpha|x64">
+      <Configuration>Alpha</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f5835ba0-1cc8-4a70-b547-5c94c832a65c}</ProjectGuid>
+    <RootNamespace>RyezXTRInternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Sensical</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>ext\google protobuf\include\;ext\lazyimporter;ext\minhook;ext\steam;ext\discord;ext\stb;ext\lodepng;ext\json;ext\freetype\include;ext\imgui\impl;ext\imgui;$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>ext\google protobuf\lib;ext\discord\lib;ext\freetype\win64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)object\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>sensical_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>ext\google protobuf\include\;ext\lazyimporter;ext\minhook;ext\steam;ext\discord;ext\stb;ext\lodepng;ext\json;ext\freetype\include;ext\imgui\impl;ext\imgui;$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>ext\google protobuf\lib;ext\discord\lib;ext\freetype\win64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)object\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>sensical_release</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|x64'">
+    <IncludePath>ext\google protobuf\include\;ext\lazyimporter;ext\minhook;ext\steam;ext\discord;ext\stb;ext\lodepng;ext\json;ext\freetype\include;ext\imgui\impl;ext\imgui;$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>ext\google protobuf\lib;ext\discord\lib;ext\freetype\win64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)object\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>sensical_alpha</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled_generated.h</PrecompiledHeaderFile>
+      <MinimalRebuild>false</MinimalRebuild>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;winmm.lib;ntdll.lib;libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalOptions>/Zc:threadSafeInit</AdditionalOptions>
+      <CallingConvention>Cdecl</CallingConvention>
+      <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4172;4227;4244;4307;4996</DisableSpecificWarnings>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled_generated.h</PrecompiledHeaderFile>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>libprotobuf.lib;d3d11.lib;winmm.lib;ntdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Alpha|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;NOMINMAX;ALPHA_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalOptions>/Zc:threadSafeInit</AdditionalOptions>
+      <CallingConvention>Cdecl</CallingConvention>
+      <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4172;4227;4244;4307;4996</DisableSpecificWarnings>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled_generated.h</PrecompiledHeaderFile>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>libprotobuf.lib;d3d11.lib;winmm.lib;ntdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ext\freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\integer-types.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\mac-support.h" />
+    <ClInclude Include="ext\freetype\include\freetype\config\public-macros.h" />
+    <ClInclude Include="ext\freetype\include\freetype\freetype.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftcolor.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftdriver.h" />
+    <ClInclude Include="ext\freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="ext\freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftlogging.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftparams.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="ext\freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="ext\freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="ext\freetype\include\freetype\otsvg.h" />
+    <ClInclude Include="ext\freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="ext\freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="ext\freetype\include\freetype\tttables.h" />
+    <ClInclude Include="ext\freetype\include\freetype\tttags.h" />
+    <ClInclude Include="ext\freetype\include\ft2build.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\any.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\any.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\api.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\arena.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\arenastring.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\arenaz_sampler.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\arena_impl.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\code_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\command_line_interface.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\cpp\cpp_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\cpp\file.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\cpp\generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\cpp\helpers.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\cpp\names.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\csharp\csharp_doc_comment.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\csharp\csharp_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\csharp\csharp_names.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\csharp\csharp_options.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\importer.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\java\generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\java\java_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\java\kotlin_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\java\names.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\objectivec\objectivec_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\objectivec\objectivec_helpers.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\parser.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\php\php_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\plugin.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\plugin.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\python\generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\python\pyi_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\python\python_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\compiler\ruby\ruby_generator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\descriptor.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\descriptor.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\descriptor_database.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\duration.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\dynamic_message.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\empty.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\endian.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\explicitly_constructed.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\extension_set.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\extension_set_inl.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\field_access_listener.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\field_mask.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_enum_reflection.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_enum_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_message_bases.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_message_reflection.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_message_tctable_decl.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_message_tctable_impl.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\generated_message_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\has_bits.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\implicit_weak_message.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\inlined_string_field.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\gzip_stream.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\io_win32.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\printer.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\strtod.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\tokenizer.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\io\zero_copy_stream_impl_lite.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map_entry.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map_entry_lite.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map_field.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map_field_inl.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map_field_lite.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\map_type_handler.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\message.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\message_lite.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\metadata.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\metadata_lite.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\parse_context.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\port.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\reflection.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\reflection_ops.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\repeated_field.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\repeated_ptr_field.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\service.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\source_context.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\struct.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\bytestream.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\callback.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\casts.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\common.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\hash.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\logging.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\macros.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\map_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\mutex.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\once.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\platform_macros.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\port.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\status.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\stl_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\stringpiece.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\strutil.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\stubs\template_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\text_format.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\timestamp.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\type.pb.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\unknown_field_set.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\delimited_message_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\field_comparator.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\field_mask_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\json_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\message_differencer.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\time_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\type_resolver.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\util\type_resolver_util.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\wire_format.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\wire_format_lite.h" />
+    <ClInclude Include="ext\google protobuf\include\google\protobuf\wrappers.pb.h" />
+    <ClInclude Include="ext\imgui\cpp\imgui_stdlib.h" />
+    <ClInclude Include="ext\imgui\imconfig.h" />
+    <ClInclude Include="ext\imgui\imgui.h" />
+    <ClInclude Include="ext\imgui\imgui_freetype.h" />
+    <ClInclude Include="ext\imgui\imgui_internal.h" />
+    <ClInclude Include="ext\imgui\impl\imgui_impl_dx11.h" />
+    <ClInclude Include="ext\imgui\impl\imgui_impl_win32.h" />
+    <ClInclude Include="ext\imgui\imstb_rectpack.h" />
+    <ClInclude Include="ext\imgui\imstb_textedit.h" />
+    <ClInclude Include="ext\imgui\imstb_truetype.h" />
+    <ClInclude Include="ext\imgui\nanosvg.h" />
+    <ClInclude Include="ext\imgui\stb_image.h" />
+    <ClInclude Include="ext\json\json.hpp" />
+    <ClInclude Include="ext\lazyimporter\LazyImporter.h" />
+    <ClInclude Include="ext\lodepng\lodePNG.h" />
+    <ClInclude Include="ext\minhook\buffer.h" />
+    <ClInclude Include="ext\minhook\hde\hde32.h" />
+    <ClInclude Include="ext\minhook\hde\hde64.h" />
+    <ClInclude Include="ext\minhook\hde\pstdint.h" />
+    <ClInclude Include="ext\minhook\hde\table32.h" />
+    <ClInclude Include="ext\minhook\hde\table64.h" />
+    <ClInclude Include="ext\minhook\minhook.h" />
+    <ClInclude Include="ext\minhook\trampoline.h" />
+    <ClInclude Include="ext\stb\stb_image.h" />
+    <ClInclude Include="ext\stb\stb_sprintf.h" />
+    <ClInclude Include="ext\steam\isteamclient.h" />
+    <ClInclude Include="ext\steam\isteamfriends.h" />
+    <ClInclude Include="ext\steam\isteamgamecoordinator.h" />
+    <ClInclude Include="ext\steam\isteammatchmaking.h" />
+    <ClInclude Include="ext\steam\isteamuser.h" />
+    <ClInclude Include="ext\steam\isteamutils.h" />
+    <ClInclude Include="ext\steam\matchmaking.h" />
+    <ClInclude Include="ext\steam\steamclientpublic.h" />
+    <ClInclude Include="ext\steam\steamtypes.h" />
+    <ClInclude Include="ext\steam\steamuniverse.h" />
+    <ClInclude Include="src\config\Config.h" />
+    <ClInclude Include="src\config\Variables.h" />
+    <ClInclude Include="src\Download.h" />
+    <ClInclude Include="src\features\entities\EntityList.h" />
+    <ClInclude Include="src\features\Features.h" />
+    <ClInclude Include="src\features\legitbot\Legitbot.h" />
+    <ClInclude Include="src\features\misc\ChatHandler.h" />
+    <ClInclude Include="src\features\misc\FSN Handler.h" />
+    <ClInclude Include="src\features\misc\Miscellaneous.h" />
+    <ClInclude Include="src\features\misc\Movement.h" />
+    <ClInclude Include="src\features\misc\ShotHandler.h" />
+    <ClInclude Include="src\features\prediction\Prediction.h" />
+    <ClInclude Include="src\features\ragebot\Antiaim.h" />
+    <ClInclude Include="src\features\ragebot\Autowall.h" />
+    <ClInclude Include="src\features\ragebot\Doubletap.h" />
+    <ClInclude Include="src\features\ragebot\Lagcomp.h" />
+    <ClInclude Include="src\features\ragebot\NoSpread.h" />
+    <ClInclude Include="src\features\ragebot\Ragebot.h" />
+    <ClInclude Include="src\features\threading\Threader.h" />
+    <ClInclude Include="src\features\visuals\Chams.h" />
+    <ClInclude Include="src\features\visuals\Grenade.h" />
+    <ClInclude Include="src\features\visuals\GrenadePrediction.h" />
+    <ClInclude Include="src\features\visuals\Inventory.h" />
+    <ClInclude Include="src\features\visuals\Modulation.h" />
+    <ClInclude Include="src\features\visuals\Overlay.h" />
+    <ClInclude Include="src\features\visuals\ParticleManager.h" />
+    <ClInclude Include="src\features\visuals\PlayerESP.h" />
+    <ClInclude Include="src\features\visuals\Scope.h" />
+    <ClInclude Include="src\features\visuals\StringForSkyboxes.h" />
+    <ClInclude Include="src\Globals.h" />
+    <ClInclude Include="src\gui\ApraGui.h" />
+    <ClInclude Include="src\gui\DX11BlurEffect.h" />
+    <ClInclude Include="src\gui\FontAwesome.h" />
+    <ClInclude Include="src\gui\fonts.h" />
+    <ClInclude Include="src\gui\Gui.h" />
+    <ClInclude Include="src\gui\GunIcons.h" />
+    <ClInclude Include="src\gui\Helpers.h" />
+    <ClInclude Include="src\gui\images.h" />
+    <ClInclude Include="src\gui\imguisettings.h" />
+    <ClInclude Include="src\gui\SmallestPixel.h" />
+    <ClInclude Include="src\hooks\DetourHook.h" />
+    <ClInclude Include="src\hooks\Hooks.h" />
+    <ClInclude Include="src\memory\crypt\CSHA1.h" />
+    <ClInclude Include="src\memory\crypt\FNV1A.h" />
+    <ClInclude Include="src\memory\crypt\MurMur.h" />
+    <ClInclude Include="src\memory\crypt\XorStr.h" />
+    <ClInclude Include="src\memory\datatypes\CBaseHandle.h" />
+    <ClInclude Include="src\memory\datatypes\CInterlockedInt.h" />
+    <ClInclude Include="src\memory\datatypes\Color.h" />
+    <ClInclude Include="src\memory\datatypes\CStrongHandle.h" />
+    <ClInclude Include="src\memory\datatypes\CThreadMutex.h" />
+    <ClInclude Include="src\memory\datatypes\CThreadSpinMutex.h" />
+    <ClInclude Include="src\memory\datatypes\CThreadSpinRWLock.h" />
+    <ClInclude Include="src\memory\datatypes\CTSList.h" />
+    <ClInclude Include="src\memory\datatypes\CUserCmd.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlFixedMemory.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlHash.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlMap.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlMemory.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlMemoryPoolBase.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlString.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlStringToken.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlSymbolLarge.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlVector.h" />
+    <ClInclude Include="src\memory\datatypes\KeyValues3.h" />
+    <ClInclude Include="src\memory\datatypes\Matrix.h" />
+    <ClInclude Include="src\memory\datatypes\Pe64.h" />
+    <ClInclude Include="src\memory\datatypes\QAngle.h" />
+    <ClInclude Include="src\memory\datatypes\QuantanizedDataTypes.h" />
+    <ClInclude Include="src\memory\datatypes\Quaternion.h" />
+    <ClInclude Include="src\memory\datatypes\CUtlLinkedList.h" />
+    <ClInclude Include="src\memory\datatypes\Vector.h" />
+    <ClInclude Include="src\memory\Memory.h" />
+    <ClInclude Include="src\memory\RetSpoof.h" />
+    <ClInclude Include="src\menu\Anims.h" />
+    <ClInclude Include="src\menu\Colorpicker.h" />
+    <ClInclude Include="src\menu\NewFont.h" />
+    <ClInclude Include="src\menu\NewFonts.h" />
+    <ClInclude Include="src\menu\Images.h" />
+    <ClInclude Include="src\menu\NewGui.h" />
+    <ClInclude Include="src\menu\NewMenu.h" />
+    <ClInclude Include="src\Precompiled.h" />
+    <ClInclude Include="src\utilities\CRT.h" />
+    <ClInclude Include="src\utilities\Draw.h" />
+    <ClInclude Include="src\utilities\IdaDefs.h" />
+    <ClInclude Include="src\utilities\InputSytem.h" />
+    <ClInclude Include="src\utilities\Logging.h" />
+    <ClInclude Include="src\utilities\Math.h" />
+    <ClInclude Include="src\utilities\ResourceManager.h" />
+    <ClInclude Include="src\utilities\Utilities.h" />
+    <ClInclude Include="src\valve\cgcclient\CGCClient.h" />
+    <ClInclude Include="src\valve\cgcclient\CGCClientSharedObjectCache.h" />
+    <ClInclude Include="src\valve\cgcclient\CGCClientSharedObjectTypeCache.h" />
+    <ClInclude Include="src\valve\cgcclient\CGCClientSystem.h" />
+    <ClInclude Include="src\valve\Definitions.h" />
+    <ClInclude Include="src\valve\econ\CEconItem.h" />
+    <ClInclude Include="src\valve\econ\CEconItemDefinition.h" />
+    <ClInclude Include="src\valve\econ\CEconItemSchema.h" />
+    <ClInclude Include="src\valve\Convars.h" />
+    <ClInclude Include="src\valve\econ\CEconItemSystem.h" />
+    <ClInclude Include="src\valve\Entity.h" />
+    <ClInclude Include="src\valve\Enums.h" />
+    <ClInclude Include="src\valve\Functions.h" />
+    <ClInclude Include="src\valve\hudpanels\CCSGOMapOverview.h" />
+    <ClInclude Include="src\valve\interface list\CCSGameRules.h" />
+    <ClInclude Include="src\valve\interface list\CCSGOInput.h" />
+    <ClInclude Include="src\valve\interface list\CDebugOverlayGameSystem.h" />
+    <ClInclude Include="src\valve\interface list\CEventManager.h" />
+    <ClInclude Include="src\valve\interface list\CGameEvent.h" />
+    <ClInclude Include="src\valve\interface list\CGameTraceManager.h" />
+    <ClInclude Include="src\valve\interface list\CGameEntitySystem.h" />
+    <ClInclude Include="src\valve\interface list\CLagCompensationManager.h" />
+    <ClInclude Include="src\valve\interface list\IGameUIService.h" />
+    <ClInclude Include="src\valve\interface list\CLocalize.h" />
+    <ClInclude Include="src\valve\interface list\GlobalVariables.h" />
+    <ClInclude Include="src\valve\interface list\IClientModeShared.h" />
+    <ClInclude Include="src\valve\interface list\IEngineClient.h" />
+    <ClInclude Include="src\valve\interface list\IEngineCvar.h" />
+    <ClInclude Include="src\valve\interface list\IGameResourceervice.h" />
+    <ClInclude Include="src\valve\interface list\IInputService.h" />
+    <ClInclude Include="src\valve\interface list\IInputSystem.h" />
+    <ClInclude Include="src\valve\interface list\IMaterialSystem.h" />
+    <ClInclude Include="src\valve\interface list\INetworkClientService.h" />
+    <ClInclude Include="src\valve\interface list\CPrediction.h" />
+    <ClInclude Include="src\valve\interface list\IParticleSystem.h" />
+    <ClInclude Include="src\valve\interface list\IResourceSystem.h" />
+    <ClInclude Include="src\valve\interface list\ISceneSystem.h" />
+    <ClInclude Include="src\valve\interface list\ISource2Client.h" />
+    <ClInclude Include="src\valve\interface list\ISwapChainDX11.h" />
+    <ClInclude Include="src\valve\interface list\IMemAlloc.h" />
+    <ClInclude Include="src\valve\interface list\ISchemaSystem.h" />
+    <ClInclude Include="src\valve\interface list\IViewRender.h" />
+    <ClInclude Include="src\valve\Interfaces.h" />
+    <ClInclude Include="src\valve\playerinventory\CCSPlayerInventory.h" />
+    <ClInclude Include="src\valve\playerinventory\CCSPlayerInventoryManager.h" />
+    <ClInclude Include="src\valve\protobufs\cs_usercmd.pb.h" />
+    <ClInclude Include="src\valve\protobufs\networkbasetypes.pb.h" />
+    <ClInclude Include="src\valve\protobufs\network_connection.pb.h" />
+    <ClInclude Include="src\valve\protobufs\usercmd.pb.h" />
+    <ClInclude Include="src\valve\Schema.h" />
+    <ClInclude Include="src\valve\Trace.h" />
+    <ClInclude Include="src\menu\Unicodes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ext\imgui\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="ext\imgui\imgui.cpp" />
+    <ClCompile Include="ext\imgui\imgui_draw.cpp" />
+    <ClCompile Include="ext\imgui\imgui_freetype.cpp" />
+    <ClCompile Include="ext\imgui\imgui_tables.cpp" />
+    <ClCompile Include="ext\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="ext\imgui\impl\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ext\imgui\impl\imgui_impl_win32.cpp" />
+    <ClCompile Include="ext\lodepng\lodePNG.cpp" />
+    <ClCompile Include="ext\minhook\buffer.c" />
+    <ClCompile Include="ext\minhook\hde\hde32.c" />
+    <ClCompile Include="ext\minhook\hde\hde64.c" />
+    <ClCompile Include="ext\minhook\hook.c" />
+    <ClCompile Include="ext\minhook\trampoline.c" />
+    <ClCompile Include="src\config\Config.cpp" />
+    <ClCompile Include="src\Download.cpp" />
+    <ClCompile Include="src\features\Features.cpp" />
+    <ClCompile Include="src\features\legitbot\Legitbot.cpp" />
+    <ClCompile Include="src\features\misc\ChatHandler.cpp" />
+    <ClCompile Include="src\features\misc\Miscellaneous.cpp" />
+    <ClCompile Include="src\features\misc\Movement.cpp" />
+    <ClCompile Include="src\features\misc\ShotHandler.cpp" />
+    <ClCompile Include="src\features\prediction\Prediction.cpp" />
+    <ClCompile Include="src\features\ragebot\Antiaim.cpp" />
+    <ClCompile Include="src\features\ragebot\Autowall.cpp" />
+    <ClCompile Include="src\features\ragebot\Doubletap.cpp" />
+    <ClCompile Include="src\features\ragebot\Lagcomp.cpp" />
+    <ClCompile Include="src\features\ragebot\NoSpread.cpp" />
+    <ClCompile Include="src\features\ragebot\Ragebot.cpp" />
+    <ClCompile Include="src\features\visuals\Chams.cpp" />
+    <ClCompile Include="src\features\visuals\Grenade.cpp" />
+    <ClCompile Include="src\features\visuals\GrenadePrediction.cpp" />
+    <ClCompile Include="src\features\visuals\Inventory.cpp" />
+    <ClCompile Include="src\features\visuals\Modulation.cpp" />
+    <ClCompile Include="src\features\visuals\Overlay.cpp" />
+    <ClCompile Include="src\features\visuals\ParticleManager.cpp" />
+    <ClCompile Include="src\features\visuals\PlayerESP.cpp" />
+    <ClCompile Include="src\features\visuals\Scope.cpp" />
+    <ClCompile Include="src\Globals.cpp" />
+    <ClCompile Include="src\gui\ApraGui.cpp" />
+    <ClCompile Include="src\gui\DX11BlurEffect.cpp" />
+    <ClCompile Include="src\gui\FontAwesome.cpp" />
+    <ClCompile Include="src\gui\Gui.cpp" />
+    <ClCompile Include="src\gui\Helpers.cpp" />
+    <ClCompile Include="src\hooks\Hooks.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\memory\crypt\CSHA1.cpp" />
+    <ClCompile Include="src\memory\crypt\MurMur.cpp" />
+    <ClCompile Include="src\memory\datatypes\CBaseHandle.cpp" />
+    <ClCompile Include="src\memory\datatypes\Vector.cpp" />
+    <ClCompile Include="src\memory\Memory.cpp" />
+    <ClCompile Include="src\menu\Colorpicker.cpp" />
+    <ClCompile Include="src\menu\NewGui.cpp" />
+    <ClCompile Include="src\menu\NewMenu.cpp" />
+    <ClCompile Include="src\utilities\Draw.cpp" />
+    <ClCompile Include="src\utilities\InputSystem.cpp" />
+    <ClCompile Include="src\utilities\Logging.cpp" />
+    <ClCompile Include="src\utilities\Math.cpp" />
+    <ClCompile Include="src\utilities\ResourceManager.cpp" />
+    <ClCompile Include="src\utilities\Utilities.cpp" />
+    <ClCompile Include="src\valve\Convars.cpp" />
+    <ClCompile Include="src\valve\Entity.cpp" />
+    <ClCompile Include="src\valve\interface list\CEventManager.cpp" />
+    <ClCompile Include="src\valve\Interfaces.cpp" />
+    <ClCompile Include="src\valve\playerinventory\CCSPlayerInventory.cpp" />
+    <ClCompile Include="src\valve\playerinventory\CCSPlayerInventoryManager.cpp" />
+    <ClCompile Include="src\valve\protobufs\cs_usercmd.pb.cpp" />
+    <ClCompile Include="src\valve\protobufs\networkbasetypes.pb.cpp" />
+    <ClCompile Include="src\valve\protobufs\network_connection.pb.cpp" />
+    <ClCompile Include="src\valve\protobufs\usercmd.pb.cpp" />
+    <ClCompile Include="src\valve\Schema.cpp" />
+    <ClCompile Include="src\valve\Functions.cpp" />
+    <ClCompile Include="src\valve\Trace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ext\freetype\win64\freetype.lib" />
+    <Library Include="ext\google protobuf\google protobuf\lib\libprotobuf.lib" />
+    <Library Include="ext\google protobuf\lib\libprotobufd.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\memory\RetSpoofStub.asm">
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ext\google protobuf\include\google\protobuf\port_def.inc" />
+    <None Include="ext\google protobuf\include\google\protobuf\port_undef.inc" />
+    <None Include="ext\google protobuf\lib\pkgconfig\protobuf-lite.pc" />
+    <None Include="ext\google protobuf\lib\pkgconfig\protobuf.pc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

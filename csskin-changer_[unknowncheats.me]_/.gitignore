@@ -1,0 +1,38 @@
+# Visual Studio user state
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# C/C++ build artifacts
+*.aps
+*.bsc
+*.cache
+*.db
+*.dll
+*.exe
+*.exp
+*.ilk
+*.ipch
+*.iobj
+*.ipdb
+*.lib
+*.log
+*.map
+*.obj
+*.pdb
+*.pch
+*.res
+*.tlog
+
+# NuGet/package restore output
+packages/

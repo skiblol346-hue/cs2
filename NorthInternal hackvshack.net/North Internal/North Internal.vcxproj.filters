@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{63f0976f-26b1-4187-b1f6-a8e4b0bcd62a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{c5d0df63-bd96-448f-9b06-64a70e21e5cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{7ea4c8f5-23f0-47dc-b77f-774c8ae0efb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\MinHook">
+      <UniqueIdentifier>{6e066336-fe92-4d2c-88a8-c93deec61009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\ImGui">
+      <UniqueIdentifier>{6354358b-c438-4e66-8707-ea03563c6b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Menu">
+      <UniqueIdentifier>{b186f2e9-e2dc-4d13-9272-d65a9edac541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\ESP">
+      <UniqueIdentifier>{16124d83-229a-42b1-a3ab-a6fc8ab8d0dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{178dab13-d09a-4bdf-8c2b-183bbf401397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\LegitBot">
+      <UniqueIdentifier>{9bc699a8-457e-4c45-9777-04396f8e738a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Configs">
+      <UniqueIdentifier>{6f765aec-9285-4eb2-ab95-b40917f3e8a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\View">
+      <UniqueIdentifier>{fc58756e-ec9b-4d82-aa71-db3ab0675085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\SkinChanger">
+      <UniqueIdentifier>{be3268be-841e-4cc9-b576-fe1fac93b47d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dependencies\MinHook\buffer.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\MinHook\hde32.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\MinHook\hde64.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\MinHook\hook.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\MinHook\trampoline.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\ImGui\imgui.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\ImGui\imgui_draw.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\ImGui\imgui_impl_dx11.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\ImGui\imgui_impl_win32.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\ImGui\imgui_tables.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\ImGui\imgui_widgets.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Menu\Menu.cpp">
+      <Filter>Features\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\dllmain.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Hooks.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Menu\UI.cpp">
+      <Filter>Features\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\ESP\Flags.cpp">
+      <Filter>Features\ESP</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\ESP\General.cpp">
+      <Filter>Features\ESP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\EntityList.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Offsets.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Renderer.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\PatternScanner.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\LegitBot\LegitAim.cpp">
+      <Filter>Features\LegitBot</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\LegitBot\LegitAutoFire.cpp">
+      <Filter>Features\LegitBot</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\LegitBot\LegitGeneral.cpp">
+      <Filter>Features\LegitBot</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\LegitBot\LegitHitGroups.cpp">
+      <Filter>Features\LegitBot</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Configs\Configs.cpp">
+      <Filter>Features\Configs</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\View\View.cpp">
+      <Filter>Features\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\SkinChanger\SkinChanger.cpp">
+      <Filter>Features\SkinChanger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\MinHook\buffer.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\hde32.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\hde64.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\MinHook.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\pstdint.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\table32.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\table64.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\MinHook\trampoline.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imgui.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imconfig.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imgui_internal.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imstb_rectpack.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imstb_textedit.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imgui_impl_dx11.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imgui_impl_win32.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\ImGui\imstb_truetype.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Menu\Menu.hpp">
+      <Filter>Features\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Hooks.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Menu\Icons.h">
+      <Filter>Features\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Menu\font_data.h">
+      <Filter>Features\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Menu\UI.hpp">
+      <Filter>Features\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Math.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Entity.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\EntityList.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\ESP\General.hpp">
+      <Filter>Features\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\ESP\Flags.hpp">
+      <Filter>Features\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Vector.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Offsets.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Memory.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Renderer.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\PatternScanner.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\LegitBot\LegitBot.hpp">
+      <Filter>Features\LegitBot</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Configs\Configs.hpp">
+      <Filter>Features\Configs</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\View\View.hpp">
+      <Filter>Features\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SafeRead.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\SkinChanger\SkinChanger.hpp">
+      <Filter>Features\SkinChanger</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
