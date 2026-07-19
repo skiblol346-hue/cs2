@@ -1,0 +1,9 @@
+# build artifacts
+/target
+/build.log
+
+# in-progress logs (we keep the dumps/ folder itself — the latest
+# session is published with every release)
+dumps/**/logs/
+.xmake/
+build/
