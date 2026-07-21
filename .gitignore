@@ -1,0 +1,7 @@
+# Python virtual environments
+venv/
+.env/
+
+# Generated AI Vault and Vector DB (large datasets kept local to workspace)
+cs2_ai_vectordb.sqlite
+obsidian_vault/
